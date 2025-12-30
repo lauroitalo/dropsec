@@ -4,7 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KMD Advocacia Trabalhista</title>
-  <meta name="description" content="Krys Machado Deucher — Advogada Trabalhista. Consultivo & Preventivo: soluções estratégicas para empresas, treinamentos, pareceres e compliance trabalhista. Florianópolis, SC." />
+  <!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+
+<!-- Apple Touch Icon (opcional, recomendado) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-48x48.png">
+
+  <meta name="description" content="KMD Advocacia Trabalhista Digital. Atuação jurídica trabalhista consultiva, preventiva e contenciosa, com foco em ética, conformidade legal e segurança jurídica. Florianópolis, SC." />
 
   <!-- Ícone (favicon simples em base64) -->
   <link rel="icon" type="image/png"
@@ -66,7 +73,21 @@
       min-height:180px; display:flex; flex-direction:column;
     }
     .card:hover { box-shadow:0 4px 14px rgba(0,0,0,0.12); transform:translateY(-2px); }
+
+    /* Ajuste de âncoras para header fixo */
+  section[id] {
+    scroll-margin-top: 120px;
+  }
   </style>
+<!-- Open Graph / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="KMD Advocacia Trabalhista Digital">
+<meta property="og:description" content="Atuação estratégica, preventiva e técnica em Direito do Trabalho. Atendimento personalizado para empresas, escritórios e trabalhadores.">
+<meta property="og:image" content="https://dropsec.com.br/kmd.png">
+<meta property="og:url" content="https://dropsec.com.br/">
+<meta property="og:site_name" content="KMD Advocacia Trabalhista">
+
+
 </head>
 
 <body class="antialiased text-[16px]">
@@ -83,14 +104,24 @@
         class="h-14 md:h-16 w-auto"
       />
 
-      <span class="hidden md:block text-sm tracking-widest uppercase text-[var(--accent)]">
-        Advocacia e Consultoria Jurídica
-      </span>
+<!-- Desktop -->
+<span class="hidden md:block text-base tracking-widest uppercase text-[var(--accent)]">
+  Advocacia e Consultoria Jurídica
+</span>
+
+<!-- Mobile -->
+<span class="block md:hidden text-xs tracking-widest uppercase text-[var(--accent)] mt-1">
+  Advocacia e Consultoria Jurídica
+</span>
+
+
+
+
     </a>
 
     <!-- Menu Desktop -->
     <nav class="hidden md:flex gap-7 items-center text-base font-medium" aria-label="Menu principal">
-      <a href="#about" class="hover:underline">Quem sou</a>
+      <a href="#about" class="hover:underline">Sobre</a>
       <a href="#areas" class="hover:underline">Áreas</a>
       <a href="#articles" class="hover:underline">Artigos</a>
       <a href="#contact" class="hover:underline">Contato</a>
@@ -109,6 +140,27 @@
   </div>
 </header>
 
+<!-- Menu Mobile Off-canvas -->
+<nav
+  id="mobileMenu"
+  class="fixed inset-y-0 right-0 w-64 bg-[var(--primary)] text-white
+         transform translate-x-full transition-transform duration-300
+         z-[9999] p-6 space-y-6 md:hidden"
+  aria-label="Menu mobile"
+>
+
+  <button class="mb-6 text-right w-full" aria-label="Fechar menu"
+          onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')">
+    ✕
+  </button>
+
+  <a href="#about" class="block" onclick="closeMenu()">Sobre</a>
+  <a href="#areas" class="block" onclick="closeMenu()">Áreas</a>
+  <a href="#articles" class="block" onclick="closeMenu()">Artigos</a>
+  <a href="#contact" class="block" onclick="closeMenu()">Contato</a>
+</nav>
+
+
 <!-- Âncoras para navegação -->
 <div id="home"></div>
 <div id="sobre"></div>
@@ -121,14 +173,27 @@
     <section class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center
                     min-h-[45vh] sm:min-h-[70vh] md:min-h-[35vh] lg:min-h-[50vh]">
       <div class="order-2 md:order-1">
-        <h1 class="text-3xl md:text-4xl font-semibold leading-tight text-[var(--primary)]">Krys Machado Deucher</h1>
-        <p class="mt-3 text-lg text-[var(--navy)]">Advogada Trabalhista — <span class="font-medium">Consultivo & Preventivo</span></p>
+        <h1 class="text-3xl md:text-4xl font-semibold leading-tight text-[var(--primary)]">⚖️ KMD Advocacia Trabalhista Digital</h1>
+<p class="mt-4 text-lg leading-relaxed">
+  A <strong>KMD Advocacia Trabalhista Digital</strong> atua de forma
+  <strong>estratégica, preventiva e técnica</strong> no Direito do Trabalho,
+  oferecendo atendimento personalizado para <strong>empresas, escritórios e trabalhadores</strong>.
+</p>
 
         <ul class="mt-6 space-y-3 text-[var(--muted)]">
-          <li>⚖️ Especialista em Direito do Trabalho Empresarial</li>
-          <li>📝 Treinamentos, pareceres, políticas internas e compliance trabalhista</li>
-          <li>🔒 Soluções estratégicas para prevenção de passivos</li>
-        </ul>
+  <li>📝 <strong>Consultoria e assessoria trabalhista contínua</strong></li>
+  <li>🔒 <strong>Compliance trabalhista</strong> e prevenção de passivos</li>
+  <li>⚖️ <strong>Contencioso trabalhista</strong> — reclamações, defesas e recursos</li>
+  <li>📝 Elaboração e revisão de contratos e documentos trabalhistas</li>
+  <li>💼 Orientação em rotinas trabalhistas e gestão de riscos</li>
+  <li>⚖️ Atuação em audiências presenciais e virtuais</li>
+</ul>
+
+<p class="mt-6 text-base leading-relaxed">
+  🤝 O atendimento é <strong>humanizado, técnico e acessível</strong>,
+  respeitando a realidade de cada cliente e priorizando
+  <strong>soluções seguras, responsáveis e eficazes</strong>.
+</p>
 
         <div class="mt-6 flex gap-3 flex-wrap">
     <a href="https://wa.me/5548999566924?text=Ol%C3%A1%2C%20Dra.%20Krys"
@@ -152,11 +217,52 @@
       </div>
     </section>
 
-    <!-- Quem sou -->
+    <!-- Sobre -->
     <section id="about" class="mt-16 bg-[var(--bg)] py-12">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-2xl font-semibold text-[var(--primary)]">Quem sou</h2>
-        <p class="mt-4 text-[var(--muted)]">Sou <strong>Krys Machado Deucher</strong>, especialista em Direito do Trabalho Empresarial. Atuo com soluções preventivas e consultivas direcionadas a empresas, focando na redução de passivos trabalhistas por meio de políticas internas, treinamentos e pareceres estratégicos. Minha atuação prioriza a conformidade e a gestão de riscos trabalhistas para uma operação segura e sustentável.</p>
+        <h2 class="text-2xl font-semibold text-[var(--primary)]">👩‍⚖️ Quem está por trás da KMD</h2>
+        <p class="mt-4 text-[var(--muted)]">Sou <strong>Krys Machado Deucher</strong>, advogada atuante na área de Direito do Trabalho. Minha atuação é voltada à assessoria jurídica trabalhista consultiva e preventiva, com foco na conformidade legal, na orientação técnica e na gestão responsável de riscos trabalhistas.</p>
+        <p class="mt-4 leading-relaxed">
+  A <strong>KMD Advocacia</strong> foi estruturada com base em uma atuação ética, técnica e responsável no Direito do Trabalho, a partir da experiência profissional acumulada ao longo de mais de <strong>14 anos de atuação jurídica</strong> na área.
+</p>
+
+<p class="mt-4 leading-relaxed">
+  A KMD nasceu com um propósito claro:
+</p>
+
+<ul class="mt-4 space-y-2">
+  <li>⚖️ <strong>Atuação preventiva e orientativa em matéria trabalhista</strong></li>
+  <li>📝 <strong>Orientação jurídica clara e tecnicamente fundamentada</strong></li>
+  <li>🔒 <strong>Atuação ética, estratégica e responsável</strong></li>
+</ul>
+
+<p class="mt-4 leading-relaxed">
+  A atuação do escritório é pautada em uma <strong>advocacia trabalhista moderna, digital e responsável</strong>, voltada à orientação jurídica preventiva e à adequada condução das relações de trabalho.
+</p>
+
+<p class="mt-4 leading-relaxed">
+  O escritório preza pela prestação de <strong>informação jurídica qualificada</strong>, pela prevenção de conflitos e pela adoção de posicionamentos jurídicos conscientes e tecnicamente seguros.
+</p>
+
+<p class="mt-6 font-medium">
+  ⚖️ Advocacia Trabalhista Digital <br />
+  🔒 Estratégia • Prevenção • Propósito
+</p>
+
+<h3 class="mt-8 text-xl font-semibold text-[var(--navy)]">
+  🎓 Treinamentos e Palestras
+</h3>
+
+<p class="mt-4 leading-relaxed">
+  A KMD também atua com <strong>treinamentos, capacitações e palestras</strong>, voltados à orientação jurídica preventiva, à atualização legislativa e à aplicação prática do Direito do Trabalho no contexto organizacional.
+</p>
+
+<ul class="mt-4 space-y-2">
+  <li>💼 Empresários</li>
+  <li>💼 Gestores e líderes</li>
+  <li>📝 Equipes de RH</li>
+  <li>🤝 Trabalhadores</li>
+</ul>
       </div>
     </section>
 
@@ -301,36 +407,49 @@
         <a href="mailto:krys.deucher@kmd.adv.br" class="hover:text-[var(--accent)] transition" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-  </footer>
+  <p class="mt-6 text-xs text-center text-gray-500">As informações contidas neste site possuem caráter exclusivamente informativo e não constituem promessa de resultado ou aconselhamento jurídico individualizado.</p>
+</footer>
 
   <!-- Botões flutuantes -->
   <a href="#home" id="topo" class="topo-btn" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></a>
   <a href="https://wa.me/5548999566924?text=Ol%C3%A1%2C%20Dra.%20Krys" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-  <!-- Scripts -->
-  <script>
-    // Ano no rodapé
-    const yEl = document.getElementById('copyrightYear');
-    if (yEl) yEl.textContent = new Date().getFullYear();
+<!-- Scripts -->
+<script>
+  // Ano no rodapé
+  const yEl = document.getElementById('copyrightYear');
+  if (yEl) {
+    yEl.textContent = new Date().getFullYear();
+  }
 
-    // Menu mobile off-canvas
-    const btn = document.getElementById('menuBtn');
-    const mobile = document.getElementById('mobileMenu');
-    btn && btn.addEventListener('click', () => {{
+  // Menu mobile off-canvas
+  const btn = document.getElementById('menuBtn');
+  const mobile = document.getElementById('mobileMenu');
+
+  function closeMenu() {
+    if (mobile) {
+      mobile.classList.add('translate-x-full');
+    }
+  }
+
+  if (btn && mobile) {
+    btn.addEventListener('click', () => {
       mobile.classList.toggle('translate-x-full');
-    }});
+    });
+  }
 
-    // Botão topo aparece só após rolar
-    const topo = document.getElementById('topo');
-    if (topo) {{
-      const onScroll = () => {{
-        const show = window.scrollY > 200;
-        topo.style.opacity = show ? 1 : 0;
-        topo.style.pointerEvents = show ? 'auto' : 'none';
-      }};
-      window.addEventListener('scroll', onScroll, {{ passive: true }});
-      onScroll();
-    }}
-  </script>
+  // Botão topo aparece só após rolar
+  const topo = document.getElementById('topo');
+  if (topo) {
+    const onScroll = () => {
+      const show = window.scrollY > 200;
+      topo.style.opacity = show ? 1 : 0;
+      topo.style.pointerEvents = show ? 'auto' : 'none';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+</script>
+
 </body>
 </html>
